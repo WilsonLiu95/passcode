@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta lang="zh">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="render" content="webkit">
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  <title>HUST课程系统｜学生版</title>
+  <link rel="stylesheet" href="../css/student.css">
+</head>
+
+<body>
+  <!-- 导航部分 -->
+  <div id="main-header">
+    <img src="../images/hust_logo.png" alt="logo">
+
+    <span>HUST课程系统</span>
+    <ul class="nav-list">
+      <a href="#" class="active">课表</a>
+      <a href="#">个人</a>
+      <!-- <a href="">课件</a> -->
+      <a href="#">退出</a>
+    </ul>
+  </div>
+  <!-- 课表查询部分 -->
+  <div class="main-body classSelect ">
+    <div class="header">
+
+      <p class="time-show">我的课表</p>
+    </div>
+    <div class="body-content student-first">
+      <table id="J_classTable" class="class-table">
+        <colgroup span="8"></colgroup>
+        <thead>
+          <tr>
+            <th class="class-th"></th>
+            <th class="class-th">星期一</th>
+            <th class="class-th">星期二</th>
+            <th class="class-th">星期三</th>
+            <th class="class-th">星期四</th>
+            <th class="class-th">星期五</th>
+            <th class="class-th">星期六</th>
+            <th class="class-th">星期天</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="class-tr">
+            <th class="class-th">第一节</th>
+            <td class="class-td"></td>
+            <td class="class-td">通信电子线路 wilson1-12周　东九d203 <br>通信电子线路 wilson 1-12周　东九d203</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">微机原理</td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第二节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">微机原理实验</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第三节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">LOL对战分析</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第四节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">Wilson公开课</td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第五节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">郭正装逼课</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第六节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">linux开发</td>
+            <td class="class-td"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+  <!--　个人信息  -->
+  <div class="main-body personalInfo disappear">
+    <div class="header">
+      <span>我的信息</span>
+      <button id="J_modifyInfo">修改信息</button>
+    </div>
+    <div class="body-content student-second">
+
+      <form id="form-student">
+
+        <div class=" col-pc-6">
+          <label>姓名
+            <input class="userName" type="text" value="WilsonTEST">
+          </label>
+        </div>
+        <div class="col-pc-6">
+          <label>账号</label>
+          <input class="userCode" type="text">
+        </div>
+        <div class="col-pc-6">
+          <label>院系</label>
+          <input class="academy" type="text">
+
+        </div>
+        <div class="col-pc-6">
+          <label>专业</label>
+          <input class="major" type="text">
+
+        </div>
+        <div class="col-pc-6">
+          <label>年级
+            <input class="grade" type="text">
+          </label>
+        </div>
+        <div class="col-pc-6">
+          <label>班级
+            <input class="class" type="text">
+          </label>
+        </div>
+        <div class="col-pc-6">
+          <label>密码
+            <input class="password" type="password">
+          </label>
+        </div>
+        <div class="col-pc-6">
+          <label>邮箱
+            <input class="email" type="text">
+          </label>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script src="../script/student.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+html{
+	position: relative;
+	width: 100%;
+}
+/*animation*/
+#section-navbar{
+
+position:absolute;
+animation:mymove 1s ease-out ;
+-moz-animation:mymove 1s ease-out ; /* Firefox */
+-webkit-animation:mymove 1s ease-out ; /* Safari and Chrome */
+-o-animation:mymove 1s ease-out ; /* Opera */
+}
+
+@keyframes mymove
+{
+from {top:-70px;}
+to {top:0px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {top:-70px;}
+to {top:0px;}
+}
+
+
+@media (max-width: 767px) {
+	#download-N{
+		display: none;
+	}
+	h1{
+		font-size: 28px;
+	}
+	.contact-by-weibo{
+		font-size: 11px;
+	}
+}
+/*navbar */
+.navbar-inverse{
+	position: absolute;
+	width: 100%;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #000;
+	opacity: 0.75;
+	z-index: 500;
+}
+#section-navbar .navbar-brand img{
+
+   margin-top: -25px;
+}
+.navbar-inverse  ul.navbar-right{
+	margin-right: 100px;
+}
+.navbar-inverse .navbar-nav > li > a{
+	font-size: 20px;
+
+}
+
+/*lunbo*/
+.carousel-inner img{
+	width: 100%;
+
+}
+/*collaspe*/
+
+
+
+/*section-1*/
+
+h1{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/*.reason-list .list-group-item{
+	border: 0px;
+}*/
+#download-N img{
+	width: 200px;
+}
+#download-N a{
+	width: 200px;
+}
+#download-N a+a{
+   margin-top: 5px;
+}
+.reason-list li {
+	list-style: none;
+}
+.reason-list li i{
+	width: 76px;
+	height: 71px;
+	display: inline-block;
+	background-image: url(../images/doctors.jpg);
+	float: left;
+
+}
+
+.r-1 { background-position: 0 0px; }
+
+.r-2 { background-position: 0 -75px; }
+
+.r-3 { background-position: 0 -150px; }
+
+.r-4 { background-position: 0 -225px; }
+
+.r-5 { background-position: 0 -300px; }
+.reason-list .meta{
+	color: grey;
+}
+.reason-list .name{
+	font-size: 16px;
+}
+ .attr{
+   font-size: 12px;
+}
+.reason-list em {
+/*	float: left;*/
+    display: inline-block;
+    margin-top: 2px;
+    padding: 5px 16px;
+    background: #c7e8ff;
+    color: #278fc4;
+    font-size: 26px;
+    line-height: 37px;
+}
+.reason-list p{
+	display: inline-block;
+
+    padding:8px 18px 3px 18px;
+    background: #dcdddd;
+    border-radius: 0 4px 4px 0;
+    color: #595757;
+    font-size: 14px;
+    line-height: 37px;
+}
+/*section-2*/
+#section-2 {
+	background-color: #f6f6f6;
+	padding-bottom: 70px;
+}
+#section-2 img{
+	display: block;
+   margin-left:auto;
+   margin-right: auto;
+   width: 60%;
+   margin-bottom: 70px;
+}
+
+#feature-list li{
+	display: inline-block;
+	text-align: center;
+	list-style: none;
+
+}
+#feature-list p{
+		 padding: 0px;
+}
+h5{
+	line-height: 1.5em;
+	font-size: 18px;
+	font-weight: 700;
+
+}
+#feature-list p{
+	color: grey;
+
+}
+#feature-list i{
+	display: inline-block;
+	background-image: url(../images/features-b.png);
+	width: 60px;
+	height: 60px;
+
+}
+
+
+.f-1 { background-position: 0px 0; }
+
+.f-2 { background-position: -60px 0; }
+
+.f-3 { background-position: -120px 0; }
+
+.f-4 { background-position: -180px 0; }
+
+.f-5 { background-position: 0px -60px; }
+
+.f-6 { background-position: -60px -60px; }
+
+.f-7 { background-position: -120px -60px; }
+
+.f-8 { background-position: -180px -60px; }
+
+/*section-3*/
+#section-3 img{
+	margin: 20px auto;
+	display: block;
+   width: 70%;
+   margin-bottom: 70px;
+}
+/*section-4*/
+#section-4{
+	background-color: #f6f6f6;
+}
+#section-4 img{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+#section-4 p{
+	text-align: center;
+	margin: 20px auto 20px auto;
+}
+#download-btn {
+	text-align: center;
+    margin-bottom: 50px;
+}
+.weibo-jumeiyi{
+	    	width:136px;
+    	height:31px;
+	    background-image: url(../images/s.png);
+    	background-position: 0 -150px;
+    	vertical-align: text-bottom;
+
+    	padding: 10px 20px 10px 40px;
+
+
+}
+
+/*footer*/
+footer{
+	text-align: center;
+}
+@media(max-width: 767px){
+	footer{
+		display: none;
+	}
+}
+footer ul li{
+	display: inline-block;
+	border-left: 1px solid #666;
+	list-style: none;
+	padding: 0px 10px 0px 10px;
+}
+footer ul li:first-child{
+	border: none;
+}
+footer a{
+	color: black;
+}

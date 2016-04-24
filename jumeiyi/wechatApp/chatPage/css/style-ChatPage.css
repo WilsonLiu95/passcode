@@ -1,0 +1,165 @@
+body {
+  margin: 0px;
+  padding: 0 10px;
+  position: relative;
+  padding-top: 10px;
+  background-color: #f7f7f7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#chat-screen li {
+  list-style: none;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+/*时间显示*/
+
+#chat-screen li.time-record {
+  display: inline-block;
+  text-align: center;
+}
+#chat-screen li.time-record time {
+  color: #999;
+  text-align: center;
+  margin: 0px auto 20px auto;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 4px;
+  clear: both;
+}
+
+/*自己所说的话*/
+
+#chat-screen li.self {
+  display: inline-block;
+}
+#chat-screen li.myself p {
+  position: relative;
+  float: right;
+  margin: 0px;
+  margin-right: 20px;
+  /*border: 1px #ccc solid;*/
+  border-radius: 15px;
+  display: inline-block;
+  padding: 12px 12px;
+  font-size: 18px;
+  background-color: #fffd7f;
+  max-width: 80%;
+  max-width: calc(100% - 75px);
+  word-break: break-all;
+  word-wrap: break-word;
+}
+#chat-screen li.myself img {
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 20px;
+  display: inline-block;
+  float: right;
+}
+#chat-screen li.myself p:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 12px;
+  width: 0px;
+  height: 0px;
+  border-top: 7px solid transparent;
+  border-left: 14px solid #ffedc2;
+  border-bottom: 7px solid transparent;
+}
+
+/*他人所说的话*/
+
+#chat-screen li.other {
+  width: 100%;
+}
+#chat-screen li.other img {
+  position: relative;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border-radius: 20px;
+  margin: 0px;
+  float: left;
+}
+#chat-screen li.other p {
+  position: relative;
+  font-size: 18px;
+  margin: 0px;
+  padding: 12px 12px;
+  background-color: #77d1ed;
+  border-radius: 15px;
+  display: inline-block;
+  max-width: 80%;
+  color:#fff;
+  margin-left: 20px;
+  max-width: -moz-calc(100% - 75px);
+  max-width: cal(100% - 75px);
+}
+#chat-screen li.other p:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 12px;
+  width: 0px;
+  height: 0px;
+  border-top: 7px solid transparent;
+  border-right: 14px solid #77d1ed;
+  border-bottom: 7px solid transparent;
+}
+
+/*最后一条的bottom*/
+
+#chat-screen li:last-child {
+  margin-bottom: 70px;
+}
+
+/*输入框*/
+
+#chat-input {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  background-color: #e6e6e6;
+  border-top: 1px  solid #ccc;
+  height: 60px;
+  padding: 0 20px;
+}
+#chat-input input {
+  margin: 10px 0;
+  padding: 0 10px;
+  width: 80%;
+  width: -moz-calc(100% - 75px);
+  width: cal(100% - 75px);
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #aeaeae;
+  float: left;
+	color: #333;
+	font-size: 18px;
+	background-color: #fff;
+}
+#chat-input button {
+  margin: 10px 0;
+  padding: 6px 12px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 8px;
+	font-size: 18px;
+  float: right;
+  color: #333;
+}

@@ -1,0 +1,202 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?lccdfj');
+	src:url('fonts/icomoon.eot?lccdfj#iefix') format('bedded-opentype'),
+		url('fonts/icomoon.ttf?lccdfj') format('truetype'),
+		url('fonts/icomoon.woff?lccdfj') format('woff'),
+		url('fonts/icomoon.svg?lccdfj#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-venus:before {
+	content: "\f221";
+}
+.icon-mars:before {
+	content: "\f222";
+}
+
+
+/*背景层*/
+.plu-bg-container {
+  position: absolute;
+	display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*先设 之后在JS里获取document的高度*/
+  background-color: rgba(0, 0, 0, .25);
+}
+
+
+/*弹窗容器*/
+.plu-register-container {
+  position: relative;
+  left: 50%;
+  top: 100px;
+  /*js控制 top*/
+  margin-left: -140px;
+  width: 280px;
+  height: 407px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .9);
+}
+/*头部框*/
+.plu-header {
+  position: relative;
+  width: 280px;
+  height: 64px;
+  background-color: #00c7ba;
+}
+.plu-header img {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+.plu-header strong {
+  position: relative;
+  top: 22px;
+  margin-left: 40px;
+  color: #fff;
+  font-size: 18px;
+}
+
+/*表单列表*/
+.plu-register-form {
+  position: relative;
+  top: 8px;
+}
+/*前三个input的容器*/
+.plu-register-form > div:nth-child(1),
+.plu-register-form > div:nth-child(3),
+.plu-register-form > div:nth-child(5) {
+  width: 232px;
+  height: 34px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+/*验证码input的容器处理*/
+.plu-register-form > div:nth-child(5) {
+  /*margin-left: 24px;*/
+  display: inline-block;
+  margin-right: 10px;
+  /*float: left;*/
+  width: 122px;
+}
+/*警告语绝对定位住了*/
+.plu-register-form em {
+  position: absolute;
+  left: 60px;
+  display: none;
+  font-style: normal;
+  font-size: 11px;
+  color: #ff9305;
+}
+/*外边框处理*/
+.plu-register-form input {
+  outline-color: #00c7ba;
+}
+#plu-send-code: {
+	outline-color: #00c7ba;
+
+}
+/*前三个input的处理*/
+.plu-register-form div > input:nth-child(2) {
+  width: 230px;
+  height: 34px;
+  border: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  padding-left: 34px;
+  font-size: 18px;
+}
+/*验证码输入框的二次宽度处理*/
+.plu-register-form >div > input.plu-security-code {
+  width: 122px;
+}
+/*发送验证码*/
+#plu-send-code {
+  position: relative;
+  display: inline-block;
+  width: 94px;
+  background-color: #41e3d5;
+  height: 36px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/*几个input内图片的处理*/
+
+.plu-register-form div img {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+}
+
+/*性别选择*/
+.plu-sex-choose {
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
+.plu-sex-choose label {
+  font-size: 18px;
+  color: #ccc;
+}
+.plu-sex-choose label::before {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.plu-sex-choose input[type=radio]{
+  opacity: 0;
+}
+.plu-sex-choose input[type=radio]:checked + label {
+  color: #00c7ba;
+}
+/*确认按钮*/
+.plu-form-confirm {
+  width: 232px;
+  height: 40px;
+  color: #00c7ba;
+  font-size: 18px;
+  background-color: #fff;
+  border: 1px solid #00c7ba;
+  border-radius: 20px;
+  outline: 0;
+}
+
+
+/*弹出效果控制*/
+.plu-pop-up {
+	display: block;
+
+}
+.plu-pop-up .plu-register-container{
+	animation: popup .5s;
+}
+@keyframes popup {
+	0% {transform: scale(0);
+	100% {transform:scale(1)}
+
+}

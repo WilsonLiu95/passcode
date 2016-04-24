@@ -1,0 +1,357 @@
+
+    body{
+      background-color: #f8f8f8;
+      min-width: 960px;
+
+
+    }
+    /* 页面上方导航面板*/
+    #navbar{
+      height: 60px;
+      background-color: white;
+    }
+    #nav-brand-logo img{
+      height: 60px;
+      width: 60px;
+      margin-top: -17px;
+    }
+    .logo-word p{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    .logo-word a{
+      margin-top: -30px;
+      margin-left: -12px;
+    }
+    #bs-example-navbar-collapse-1 .dropdown-toggle {
+      font-size: 22px;
+    }
+
+    .navbar-right img{ 
+      height: 58px;
+      width: 58px;
+      border-radius:50%;
+      margin-right: 20px;
+    }
+
+
+
+
+/* 左部导航菜单 */
+    #left-body{
+      border: solid 1px;
+      margin-left: 8%;
+      width: 15%;
+      float: left;
+      border-color:#e7e7e7;
+      background-color: white;
+      height: 800px;
+
+
+    }
+
+    #left-body li{
+      margin-left: 0px;
+      padding: 0px;
+      
+
+    }
+    #left-body li img{
+      margin-left: -70px;
+      margin-right: 55px;
+
+    }
+    #left-body li div{
+      padding-left: 30px;
+
+    }
+    hr{
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+    /* 右部内容区域*/
+    #right-body{
+     
+      margin-left: 23.1%;
+      height: 800px;
+      margin-right: 8%;
+      border-color:#e7e7e7;
+      background-color: white;
+    }
+    #right-body .panel{
+      margin:0px;
+      margin-bottom: 2px;
+
+    }
+
+/* 首页 */
+    #xfmqr{
+      height: 300px;
+
+    }
+    #gfgg{
+      height:496px;
+    }
+    #gfgg a{
+      height:50px;
+
+    }
+
+    #gfgg time{
+      margin-bottom: auto;
+      margin-top: auto;
+
+    }
+    #announcement-href span{
+      display: none;
+    }
+
+
+
+/* 活动统计 */
+    #dqhdzj{
+      height: 180px;
+    }
+    #hdqs{
+      height: 618px;
+    }
+    #tb1{
+      margin-top: -30px;
+      margin-left: auto;
+      margin-right: auto;
+    
+    }
+
+
+/* 顾客统计 */
+    #gkzj{
+      height: 115px;
+    }
+    #gkcyqs{
+      height: 425px;
+    }
+    #gkfb{
+      height: 256px;
+    }
+    #tb2{
+      margin-top: -30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+/* 店铺评价*/
+    #plzj{
+      height: 90px;
+    }
+    #zxpl2{
+      height:708px;
+
+    }
+    #zxpl2 .list-group-item:nth-of-type(even) {
+     background-color: #f9f9f9;
+    }
+    #total-comment li {
+      height: 100px;
+      padding: 0px;
+
+    }
+    #total-comment div{
+      float: left;
+      padding: 10px;  
+      width: 850px;
+      
+    }
+    #total-commen img{
+      height:33px;
+      width:33px;
+    }
+    #total-comment li a{
+      float: right;
+      line-height: 100px;
+      padding-right: 10px;
+      color: red;  
+
+    }
+    #total-comment article {
+      padding-left:20px;
+      height: 40px;
+      overflow: hidden;
+    }
+    #comment-page {
+          }
+
+/*     #total-comment .list-group-item article{
+
+      padding-top: 0px;
+      padding-left: 50px;
+    }
+    #total-comment  .list-group-item a{
+      float: right;
+      margin-top: -38px;
+      color: grey;
+      font-size: 14px;
+
+    }
+    #comment-page{
+position: relative;
+left: 37%;
+
+     
+    }
+
+*?
+
+/* 账户余额 */
+    #zhye{
+      height: 140px;
+    }
+    #zhjl{
+      height: 658px;
+    }
+   
+   #zhye span a{
+    color: red;
+   }
+
+   #zhjl thead{ 
+    background-color: #D1D1D1;
+   }
+   #account-form{
+    height: 25px;
+   }
+   #account-page{
+    margin-top: -10px;
+   }
+   
+    
+
+
+
+/* 活动管理 */
+    #hdgl2{
+      height: 170px;
+    }
+    #lshd{
+      height:628px;
+    }
+    #add-new-activity{
+      float: right;
+      color: white;
+    }
+    #activity-stop-btn{
+      float: right;
+      margin-top: -38px;
+      color: white;
+      background-color:#ED5564; 
+      font-size: 14px;
+    }
+    #lshdbg thead{
+       background-color: #D1D1D1;
+    } 
+    #history-activity tr {
+      height: 43px;
+    }
+    .history-activity-name{
+      width: 46%;
+    }
+.history-activity-money{
+      width: 9%
+}
+.history-activity-stop-{
+      width: 9%
+  }time
+.history-activity-share{
+      width: 9%
+}
+.history-activity-receive{
+      width: 9%
+}
+.history-activity-confirm{
+      width: 9%
+}
+.history-activity-create{
+      width: 9%
+}
+
+/* 员工管理 */
+    #yggl2{
+      height: 800px;
+    }
+    .col-lg-12{
+      margin-bottom: 10px;
+    }
+    #tjxyg{
+      float: right;
+      color: white;
+
+    }
+    #fy{
+      text-align:center;
+
+    }
+    #ygxx thead{
+      background-color: #D1D1D1;
+     
+    }
+    #ygglfy{
+      margin-top: 65px;
+    }
+
+
+
+
+
+
+
+
+
+
+/* 店铺信息 */
+    #dpxx2{
+      height: 800px;
+
+    }
+    .store-intro-label{
+      color: grey;
+    }
+
+    #dpxx2 td{
+      vertical-align:middle;
+      padding: 15px;
+    }
+    #change-store-intro-btn{
+      float:right;
+      color:white;
+      margin-top:-10px;
+      margin-right:-15px;
+      height:41px;
+    }
+    #store-logo-div img{
+      height:41px;
+      width:41px;
+      float:right;
+
+    }
+    #store-logo-div input{
+      float: left;
+      width:90%;
+    }
+
+
+    /* 百度地图 */
+    #allmap{height:350px;width:100%;}
+    #r-result{width:100%; font-size:14px;display: none; }
+
+
+
+
+/* 脚注 */
+    footer{
+
+
+      clear: both;
+    }
+
+    

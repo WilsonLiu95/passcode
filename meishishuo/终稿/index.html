@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>美食说</title>
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default" id="navbar">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" id="nav-brand-logo" href="#"><img src="images/logo.png" alt=""></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="logo-word"><p>美食说</p><a href="#">linkmay.com<span class="sr-only">(current)</span></a></li>
+        <li >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">后台管理系统</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">  <!-- 用户信息模块  -->
+      <li ><img id="navbar-user-icon" src="images/head-1.png" alt=""></li> <!-- 用户图片导入 src  -->
+      <li><p id="user-class">类别：<span id="user-type">美食券商家</span></p></li><!-- 用户类型  -->
+        <br>
+      <li><p ><span id="navbar-user-name">香域青年</span>  <a href="" id="exit-account"><span >[退出]</span></a></p></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="main-body">
+
+
+<div id="left-body" class="main-sidebar">
+<ul class="nav nav-pills nav-stacked nav-tabs " role="tablist" id="menu-list">
+  <li role="presentation" class="active"><a class="btn" href="#sy" aria-controls="sy" role="tab" data-toggle="tab" id="first-page"><img src="images/black-1.png" alt="">首页</a></li>
+
+  <hr class="divider">
+
+  <li role="presentation">    <a  class="disabled btn" href="#hdtj" aria-controls="tj" role="tab" data-toggle="tab"><img src="images/black-2.png" alt=""  >统计</a></li>
+  <li role="presentation">    <a class="btn" href="#hdtj" aria-controls="hdtj" role="tab" data-toggle="tab" id="second-page"> <div>活动统计</div></a></li>
+  <li role="presentation">    <a class="btn" href="#gktj" aria-controls="gktj" role="tab" data-toggle="tab" id="three-page"> <div>顾客统计</div></a></li>
+  <hr class="divider">
+
+  <li role="presentation">    <a class="disabled btn" href="#dppj" aria-controls="kf" role="tab" data-toggle="tab"> <img src="images/black-3.png" alt="">客服</a></li>
+  <li role="presentation">    <a class="btn" href="#dppj" aria-controls="dppj" role="tab" data-toggle="tab" id="four-page"> <div>店铺评价</div></a></li>
+  <hr class="divider">
+
+  <li role="presentation">    <a class="disabled btn" href="#zhye" aria-controls="zh" role="tab" data-toggle="tab"> <img src="images/black-4.png" alt="">账户</a></li>
+  <li role="presentation">    <a class="btn" href="#zhye" aria-controls="zhye" role="tab" data-toggle="tab" id="five-page"><div>账户余额</div> </a></li>
+  <hr class="divider">
+
+  <li role="presentation">    <a class="disabled btn" href="#hdgl" aria-controls="yxhd" role="tab" data-toggle="tab"> <img src="images/black-5.png" alt="">活动</a></li>
+  <li role="presentation">    <a class="btn" href="#hdgl" aria-controls="hdgl" role="tab" data-toggle="tab" id="six-page"> <div>活动管理</div></a></li>
+  <hr class="divider">
+  <li role="presentation">    <a class="disabled btn" href="#dpxx" aria-controls="sz" role="tab" data-toggle="tab"> <img src="images/black-7.png" alt="">设置</a></li>
+  <li role="presentation">    <a class="btn" href="#dpxx" aria-controls="dpxx" role="tab" data-toggle="tab" id="seven-page"> <div>店铺信息</div></a></li>
+  <hr class="divider">
+
+</ul>
+
+</div>
+
+
+
+
+<!-- 使用消费码Modal -->
+<div class="modal fade" id="use-button-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">消费码使用确认</h4>
+      </div>
+      <div class="modal-body">
+        您是否确认使用该消费码？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary"data-dismiss="modal"id="confirm-use-button" >确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="right-body" class="panel">
+
+  <!-- Tab panes -->
+  <div class="tab-content"  >
+
+    <div role="tabpanel" class="tab-pane  active" id="sy">
+   
+    <div class="panel panel-default" id="xfmqr">
+   
+   
+       <div class="panel-heading">消费码确认</div>
+         <div class="panel-body">
+          
+           <div style="float:left">
+           <p>当前活动：<span class="activity-name">开业大酬宾，分享有礼</span></p>
+           <p>活动额度：<span class="activity-money">3</span>元</p>
+           </div>
+           <div style="float:right; padding-right:80px;">
+             <p>已确认：<span class="been-confirmed">10</span> 已领券：<span class="been-received">20</span></p>
+             <p>待确认：<span class="to-confirm">10</span> 待领券：<span class="to-receive">30</span></p>
+           </div>
+          
+          <div class="row" style="margin-top:65px;">
+
+           <div class="col-lg-6">
+             <div class="input-group">
+               <input type="text" class="form-control" id="consumer-code" placeholder="5946  2659  4596">
+               <span class="input-group-btn">
+                 <button class="btn btn-default" type="button" id="query-button">查询</button>
+                 <!-- Button trigger modal -->
+                 <button class="btn btn-default" type="button" data-toggle="modal" data-target="#use-button-modal"id="use-button">使用</button>
+               </span>
+             </div><!-- /input-group -->
+           </div><!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+           </div><!-- /.col-lg-6 -->
+         </div><!-- /.row -->
+         <div style="margin-top:-610px;">
+             <div>券状态：<span id="quan-status">正常</span></div>
+             <div>券额度：<span id="quan-money">3</span>元</div>
+             <div>使用者：<span id="consumer-name">jinkill</span></div>
+             <div>领取时间：<span id="received-day">2015/9/24</span>  <span id="received-time">09:06:32</span></div>
+         </div>
+
+          </div>
+        </div>
+
+            <div class="panel panel-default " id="gfgg">
+            <div class="panel-heading">官方公告</div>         
+            <div class="panel-body ">
+            <ul class="list-group " id="announcement-href" >
+            <a class="list-group-item" id="announcement-href-1" data-toggle="modal" data-target="#office-announcement" >
+               <div><b id="announcement-title-1">111商家充值可以使用银联在线啦！</b> <time id="announcement-time-1" style="float:right">9/24</time></div>
+               <span>11商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！</span>
+             </a>
+            
+            <a class="list-group-item"  id="announcement-href-2" data-toggle="modal"data-target="#office-announcement">
+            <div><b id="announcement-title-2">2222商家充值可以使用银联在线啦！</b><time id="announcement-time-2" style="float:right;">9/24</time></div>
+            <span>22商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>
+            
+            <a class="list-group-item"  id="announcement-href-3" data-toggle="modal"data-target="#office-announcement">
+            <div><b id="announcement-title-3">33商家充值可以使用银联在线啦！</b><time id="announcement-time-3" style="float:right;">9/24</time></div>
+            <span >33商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>
+              <a class="list-group-item"  id="announcement-href-4" data-toggle="modal"data-target="#office-announcement">
+            <div><b id="announcement-title-4">44商家充值可以使用银联在线啦！</b><time id="announcement-time-4" style="float:right;">9/24</time></div>
+            <span >44商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>  <a class="list-group-item"  id="announcement-href-5" data-toggle="modal"data-target="#office-announcement">
+            <div><b id="announcement-title-5">55商家充值可以使用银联在线啦！</b><time id="announcement-time-5" style="float:right;">9/24</time></div>
+            <span >55商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>  <a class="list-group-item"  id="announcement-href-6" data-toggle="modal"data-target="#office-announcement">
+            <div><b id="announcement-title-6">66商家充值可以使用银联在线啦！</b><time id="announcement-time-6" style="float:right;">9/24</time></div>
+            <span >66商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>  <a class="list-group-item"  id="announcement-href-3" data-toggle="modal"data-target="#office-announcement">
+            <div><b id="announcement-title-7">77商家充值可以使用银联在线啦！</b><time id="announcement-time-7" style="float:right;">9/24</time></div>
+            <span  >77商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>
+            
+            <a class="list-group-item"  id="announcement-href-8" data-toggle="modal" data-target="#office-announcement">
+            <div><b id="announcement-title-8">88商家充值可以使用银联在线啦！</b><time id="announcement-time-8" style="float:right;">9/24</time></div>
+            <span >88商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦！商家充值可以使用银联在线啦</span>
+            </a>  
+           
+            </ul>
+            </div>
+            </div>
+   
+
+
+     </div>
+
+<!-- Modal -->
+<div class="modal fade" id="office-announcement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="office-announcement-title"></h4>
+      </div>
+      <div class="modal-body" id="office-announcement-span">
+   
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+     <!--首页 -->
+    
+    
+             <div role="tabpanel" class="tab-pane" id="hdtj">
+             <div class="panel panel-default" id="dqhdzj">
+             
+             <div class ="panel-heading">当前活动统计</div>
+             <div class ="panel-body">
+              <div style="float:left">
+           <p>当前活动：<span class="activity-name">开业大酬宾，分享有礼</span></p>
+           <p>活动额度：<span class="activity-money">3</span>元</p>
+           </div>
+           <div style="float:right; padding-right:80px;">
+             <p>已确认：<span class="been-confirmed">10</span> 已领券：<span class="been-received">20</span></p>
+             <p>待确认：<span class="to-confirm">10</span> 待领券：<span class="to-receive">30</span></p>
+           </div>
+             <br>
+             <br>
+             <br>
+             <br>
+             <div>预算：<span id="budget-money">1000</span>元 支出：<span id="spending-money" >400</span>元 冻结:<span id="freeze-money">200</span>元</div>
+             
+             </div>      
+             
+             </div>
+
+   <div class="panel panel-default" id="hdqs">
+
+           <div class="panel-heading">活动趋势</div>
+         <div class="panel-body">
+
+         <select  id="time-type-1">
+           <option value="according-day">按天</option>
+           <option value="according-month">按月</option>
+
+         </select>
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="tb1" style="height:400px;width:600px; text-align:center"></div>
+          </div>      
+
+</div>
+
+    </div><!-- 活动统计  -->
+    
+    
+    <div role="tabpanel" class="tab-pane" id="gktj">
+      
+      <div class="panel panel-default" id="gkzj">
+             <div class="panel-heading">顾客总计</div>
+         <div class="panel-body"> 
+           <div>分享顾客数：<span id="Share-customer-number">200</span></div>
+           <div>领券顾客数：<span id="receive-customer-number">300</span>     确认消费顾客数：<span id="confirm-customer-number">200</span></div>
+
+          </div>
+        
+      </div>
+
+            <div class="panel panel-default" id="gkcyqs">
+             <div class="panel-heading">顾客参与趋势</div>
+         <div class="panel-body">
+           
+         <select id="time-type-2">
+           <option value="according-day">按天</option>
+           <option value="according-month">按月</option>
+
+         </select>
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="tb2" style="height:400px;width:600px;"></div>
+          </div>       
+      </div>
+            <div class="panel panel-default" id="gkfb">
+             <div class="panel-heading">顾客分布</div>
+         <div class="panel-body">
+         <div><span id="tb3" style="height:200px;width:300px;float:left"></span> <span id="tb4" style="height:200px;width:300px; float:right;"></span></div>
+          </div>
+        
+      </div>
+    </div><!--顾客统计  -->
+   
+
+    <div role="tabpanel" class="tab-pane" id="dppj">
+      
+       <div class="panel panel-default" id="plzj">
+       <div class="panel-heading">评论总计</div>
+         <div class="panel-body">
+         <div class="row">
+              <div class="col-md-2"style="text-align:right;">总评论数:</div>
+              <div class="col-md-1" id="total-comment-number">200</div>
+              <div class="col-md-2"style="text-align:right;" >已读：</div>
+              <div class="col-md-1"id="read-comment-number">100</div>
+             
+              <div class="col-md-2" style="text-align:right;"> 未读：</div>
+              <div class="col-md-1" id="new-comment-number"> 50</div>
+
+          </div>
+          </div>
+       </div>
+
+       <div class="panel panel-default" id="zxpl2">
+       <div class="panel-heading">最新评论</div>
+<ul class="list-group " id="total-comment">
+       <li class="list-group-item">
+      <div>
+       <img src="images/head-2.png"   >
+       <span>爱吃肉</span> <span>3</span>天前
+       <article> 小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小</article>
+     </div>
+       <a id="1number" data-toggle="modal" data-target="#response-Comment">打开回复</a>
+       </li>   
+ 
+  </ul>
+  
+
+  
+<nav  style="text-align: center">
+  <ul class="pagination" id="comment-page">
+    
+     <li>
+      <a href="#" aria-label="Previous" id="previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#" aria-label="Next" id="next">
+        <span aria-hidden="true">&raquo;</span>       
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+
+
+       </div>   
+    </div>
+
+<!-- 打开回复Modal -->
+<div class="modal fade" id="response-Comment" tabindex="-1" role="dialog" aria-labelledby="response-Comment">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            <h4 class="modal-title" id="response-Comment-title">回复用户评论</h4>
+      </div>
+      <div class="modal-body" id="response-comment-body">
+        <ul class="list-group " >
+        用户评价：<li  class="list-group-item" id="comment-spread">
+      小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小店美美哒大大的推荐小
+       </li>
+        </ul>
+        商家回复：
+        <textarea name="" id="response-context" class="form-control" rows="5" required="required"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="response-comment-confirm">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--店铺评价  -->
+    
+ 
+
+
+    <div role="tabpanel" class="tab-pane " id="zhye">
+
+      <div class="panel panel-default" id="zhye">
+             <div class="panel-heading">账户余额</div>
+         <div class="panel-body">
+          <div>余额：<span id="account-balance">900</span> <span><a href="#">[充值]</a></span> <span><a href="#">[提现]</a></span></div>
+          <div>不可用余额：<span id="freeze-balance">100</span></div>
+          <br>
+          <div>兑换劵的有效期为<span id="validity-day">2</span>天。有效期内所有未确认的兑换劵对应金额处于冻结状态。</div>
+          </div>
+        
+      </div>
+
+        <div class="panel panel-default" id="zhjl">
+             <div class="panel-heading">账户记录</div>
+         <div class="panel-body">
+         <form action="" id="account-form" >
+ 
+         <input type="radio" name="account-record" id="inlineRadio-1"  value="1" checked="">账户操作记录  
+         <input type="radio" name="account-record" id="inlineRadio-2" value="2">活动支出记录
+     
+
+           </form>
+
+          <table class="table table-striped" id="account-record-sheet">
+            <thead>
+              <td>时间</td>
+              <td>操作</td>
+              <td>金额</td>
+              
+            </thead>
+            <tr>
+              <td>2015-4-25</td>
+              <td>充值</td>
+              <td>+<span>500</span></td>
+              
+            </tr>
+            <tr>
+              <td>2015-4-25</td>
+              <td>提现</td>
+              <td>-<span>300</span></td>
+              
+            </tr>
+
+           
+          </table>
+        <table class="table table-striped" id="zhjlbg">
+            <thead>
+              <td>时间</td>
+              <td>活动</td>
+              <td>消费码</td>
+              <td>金额</td>
+              
+            </thead>
+            <tr>
+              <td>2015-4-25</td>
+              <td>开业大酬宾</td>
+              <td>4200333332545</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>2015-4-25</td>
+              <td>开业大酬宾</td>
+              <td>4200332312545</td>
+              <td>2</td>
+            </tr>
+            
+           
+          </table>
+
+<nav  style="text-align: center">
+  <ul class="pagination" id="account-page">
+    
+     <li>
+      <a href="#" aria-label="Previous" id="account-page-previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#" aria-label="Next" id="account-page-next">
+        <span aria-hidden="true">&raquo;</span>       
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+          </div>       
+      </div>
+    </div><!--账户余额  -->    
+
+
+  
+
+
+<!-- 申请停止Modal -->
+<div class="modal fade" id="activity-change-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">活动状态修改</h4>
+      </div>
+      <div class="modal-body">
+        是否确认停止当前活动？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirm-change-activity-status">确认</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<div class="modal fade" id="warning">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">
+        同时只可进行一个活动，如需要添加新活动，请先取消当前活动。谢谢您的支持
+        <br>
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</div>
+ 
+   <!-- 添加新活动Modal -->
+<div class="modal fade" id="add-new-activity-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加新活动</h4>
+      </div>
+      <div class="modal-body">
+           <form class="form-group" id="add-activity-form">
+             
+              <div class="row">
+                   <label for="input" class="col-sm-3 control-label">活动名称：</label>
+             <div class="col-sm-9 ">
+               <input type="text" class="form-control" required="required" >
+             </div>
+              
+             </div>
+             <br>
+
+             <div class="row">
+            
+              <label for="input" class="col-sm-3 control-label">活动额度：</label>
+              <div class="col-sm-9">
+                <input type="number"   class="form-control"   required="required" title="">
+            
+            </div>
+             </div>
+             <br>
+
+             <div class="row">
+                                 <label for="input" class="col-sm-3 control-label">活动预算：</label>
+             <div class="col-sm-9 ">
+               <input type="number"   class="form-control"  required="required" >
+                
+             </div>
+           </div>
+           <br>
+           <div class="row">
+           <div class="col-sm-9 "></div>
+            <button type="submit" class="btn btn-primary" class="col-sm-  3 " id='add-activity-submit'data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">确认提交</button>
+             
+           </div>
+              
+              </form>
+         
+        
+      </div>
+     
+    </div>
+  </div>
+</div> 
+
+
+
+    <div role="tabpanel" class="tab-pane " id="hdgl">
+       
+       <div class="panel panel-default" id="hdgl2">
+       <div class="panel-heading">活动管理<a href="#" id="add-new-activity" data-toggle="modal" data-target=""> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  添加新活动</a>
+ 
+       </div>
+         <div class="panel-body">
+         
+          <ul class="list-group">
+          <li class="list-group-item">
+           <div>当前活动：<span id="activity-name">回馈客户大酬宾</span> </div>
+           <div>活动额度：<span id="activity-limit">3</span>元</div>
+           <div>预算：<span id="activity-budget">1000</span> 已支出：<span id="already-spend">600</span></div>
+           <button type="button" class="btn  btn-default" data-toggle="modal" data-target="#activity-change-modal"id="activity-stop-btn">申请停止</button>
+           <div>活动时间：<span id="activity-time">09/01-10/23</span id="creation-time"> 创建时间：2015/06/04</div>
+          </li> 
+          </ul>
+          </div>
+      </div>
+
+      <div class="panel panel-default" id="lshd">
+       <div class="panel-heading">历史活动</div>
+         <div class="panel-body">
+            
+          
+    <table class="table table-striped" id="lshdbg">
+       <thead>
+         <td>名称</td>
+         <td>额度</td>
+         <td>截止时间</td>
+         <td>分享人数</td>
+         <td>领券人数</td>
+         <td>确认人数</td>
+         <td>创建时间</td>
+       </thead>
+       <tbody id="history-activity">
+       <tr>
+         <td class="history-activity-name">回馈客户大酬宾回馈客户大酬宾</td>
+         <td class="history-activity-money">3</td>
+         <td class="history-activity-stop-time">2015/8/1</td>
+         <td class="history-activity-share">200</td>
+         <td class="history-activity-receive">100</td>
+         <td class="history-activity-confirm">70</td>
+         <td class="history-activity-create">2015/7/2</td>
+       </tr>
+
+       </tbody>
+       </table>
+
+<nav  style="text-align: center">
+  <ul class="pagination" id="history-activity-page"> 
+    
+     <li>
+      <a href="#" aria-label="Previous" id="activity-previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+
+     <li>
+      <a href="#" aria-label="Next" id="activity-next">
+        <span aria-hidden="true">&raquo;</span>       
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+          </div>   
+
+
+    
+      </div>
+    </div>
+    <!--活动管理  -->
+
+
+
+    
+<!-- Modal -->
+<div class="modal fade" id="store-intro-change-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改确认</h4>
+      </div>
+      <div class="modal-body">
+        是否确认修改店铺信息？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="cancel-store-change">取消</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirm-store-change">确认</button>
+      </div>
+    </div>
+  </div>
+</div> 
+    
+        <div role="tabpanel" class="tab-pane " id="dpxx">
+         <div class="panel panel-default" id="dpxx2">
+         <div class="panel-heading"><span style="left" >店铺信息</span>	
+ <!-- Button trigger modal -->
+
+          <button type="button" class="btn btn-link" id="change-store-intro-btn"
+           data-toggle="modal" >修改</button>
+        </div>
+         
+
+
+          <table class="table  table-hover" >
+          <tbody >
+               <tr>
+                 <td class="store-intro-label"><label for="store-name" class="col-sm-6  control-label">店铺姓名</label></td>
+                 <td><input type="text" class="form-control store-intro-input   "  id="store-name" value="香域青年" disabled></td>
+                 <td></td>
+               </tr>
+               <tr>
+               <td class="store-intro-label"><label for="store-status" class="col-sm-6  control-label">店铺状态</label></td>
+               <td>
+               <select name="dpzt" id="store-status" class="form-control store-intro-input" disabled>
+                 <option value="营业中">营业中</option>
+                 <option value="停业中">停业中</option>
+                 <option value="放假中">放假中</option>
+               </select>
+               </td>
+               <td></td>
+               </tr>
+               
+               <tr>
+                 <td class="store-intro-label"><label for="store-icon" class="col-sm-6  control-label">店铺logo</label></td>
+                 <td> 
+                 <div id="store-logo-div">               
+                 <input type="file" class="form-control store-intro-input" 
+                 id="store-logo " disabled value="css/bootstrap.css" id="store-icon-upfile" > 
+                  <img src="images/logo.png" id="store-icon">
+                  </div>
+                 </td>
+                 <td></td>
+
+               </tr>
+
+
+              <tr>
+                <td class="store-intro-label"><label for="store-telephone" class="col-sm-6  control-label">联系电话</label></td>
+                <td ><input  class="form-control store-intro-input  " id="store-telephone" value="18571639914" disabled></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="store-intro-label"><label for="parking-intro" class="col-sm-6  control-label">停车场说明</label></td>
+                <td ><input  class="form-control store-intro-input  " id="parking-intro" value="停车位已满" disabled></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="store-intro-label"><label for="nearby-intro" class="col-sm-6  control-label">附近设施说明</label></td>
+                <td ><input  class="form-control store-intro-input  " id="nearby-intro" value="附近有许多娱乐场所" disabled></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="store-intro-label">
+                <label for="wifi-account" class="col-sm-6  control-label">Wifi账户：</label>  
+                
+              </td>
+                  <td> <input  class="form-control store-intro-input  " id="wifi-account" value="WilsonLiu" disabled> 
+                    </td>   
+                </td>
+
+                <td></td>
+              </tr>
+               <tr>
+               	<td class="store-intro-label"><label for="wifi-password" class="col-sm-6  control-label">Wifi密码</label></td>
+               	<td><input  class="form-control store-intro-input  " id="wifi-password" value="88888888" disabled></td>
+               	<td></td>
+
+               </tr>
+
+
+              <tr>
+                <td class="store-intro-label"><label for="store-adress" class="col-sm-6  control-label">店铺地址</label></td>
+                <td>
+                       <input  class="form-control store-intro-input  " id="store-adress" value="华中科技大学主图对面" disabled></td>  
+                </td>
+                <td></td>
+              </tr>
+
+               <tr>
+                 <td class="store-intro-label"><label for="store-slogan" class="col-sm-6  control-label">店铺简介</label></td>
+                 <td ><textarea class="form-control store-intro-input" rows="5" id="store-slogan" value="" disabled>温馨，浪漫的小店。幽静之地，木樨飘香，小店恭候您的光临。</textarea></td>
+                 <td></td>
+
+               </tr>
+              </tbody>
+          </table>
+          </div>
+          </div><!--店铺信息  -->
+</div>
+</div>
+</div>
+<footer>
+  
+</footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script src="js/bootstrap.min.js">
+    '_adpro_pub= "51e5b68b6c5eb4c2aa97'
+    </script>
+    
+   
+   <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+   <script src="js/script.js"></script>
+  </body>
+</html>

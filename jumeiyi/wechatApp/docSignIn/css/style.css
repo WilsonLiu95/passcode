@@ -1,0 +1,119 @@
+html {
+  /*font-size: 32px;*/
+}
+body {
+  /*height: 100%;*/
+  width: 100%;
+  background-color: #f7f9fa;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/*图像*/
+#logo {
+  margin-top: 67px; /*4.15625rem;*/
+  /*4.84375rem*/
+  margin-bottom:77px;
+
+  width: 74px;
+  height: 74px;
+}
+
+/*表单*/
+
+form div {
+  height: 36px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+div img {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+input {
+  width: 280px;
+  height: 36px;
+  padding-left: 32px;
+  font-size: 13px;
+  border: 1px solid #7be0da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input:focus {
+  border: 0;
+  outline: 2px solid #7be0da;
+}
+
+/*placeholder居中与颜色*/
+
+::-webkit-input-placeholder {
+  text-align: center;
+  color: #ccc
+}
+::-moz-placeholder {
+  text-align: center;
+  color: #ccc
+}
+::-ms-input-placeholder {
+  text-align: center;
+  color: #ccc
+}
+
+/*按钮*/
+
+button {
+  width: 280px;
+  height: 40px;
+  background-color: #00c7ba;
+  font-size: 16px;
+  color: #fff;
+  border: 0px;
+  border-radius: 4px;
+  margin-top: 67px;
+  margin-bottom: 64px;
+}
+
+/*底部文字*/
+
+footer {
+  font-size: 11px;
+  color: #ccc;
+}
+
+/*针对高度适配*/
+@media (max-height: 635px) {
+  #logo {
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+  button {
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-height: 490px) {
+  #logo {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  button {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  form div {
+    margin-bottom: 8px;
+  }
+
+}
+/*针对宽度*/
+@media (max-width:374px) {
+  input {
+    width: 240px;
+  }
+  button {
+    width: 240px;
+  }
+
+}

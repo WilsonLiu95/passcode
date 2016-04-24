@@ -1,0 +1,288 @@
+    *{
+      margin: 0px;
+      padding: 0px;
+      font-family: italic arial,sans-serif;
+      font-size: 10px;
+    }
+    body{
+      background-color: #f8f8f8; 
+      min-height: 960px;
+      min-width: 960px;
+
+    }
+    /* 页面上方导航面板*/
+    #navbar{
+      height: 60px;
+      background-color: white;
+    }
+    #nav-brand-logo img{
+      height: 60px;
+      width: 60px;
+      margin-top: -17px;
+    }
+    .logo-word p{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    .logo-word a{
+      margin-top: -30px;
+      margin-left: -12px;
+    }
+    #bs-example-navbar-collapse-1 .dropdown-toggle {
+      font-size: 22px;
+    }
+
+    .navbar-right img{ 
+      height: 58px;
+      width: 58px;
+      border-radius:50%;
+      margin-right: 20px;
+    }
+
+
+
+/* 左部导航菜单 */
+    #left-body{
+      border: solid 1px;
+      margin-left: 8%;
+      width: 15%;
+      float: left;
+      border-color:#e7e7e7;
+      background-color: white;
+      height: 800px;
+
+
+    }
+
+    #left-body li{
+      margin: 0px;
+      padding: 0px;
+      
+
+    }
+    #left-body li img{
+     
+      padding-right: 10px;
+
+    }
+    #left-body li div{
+      padding-left: 30px;
+
+    }
+    hr{
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+    /* 右部内容区域*/
+    #right-body{
+     
+      margin-left: 23.1%;
+      height: 800px;
+      margin-right: 8%;
+      border-color:#e7e7e7;
+      background-color: white;
+    }
+    #right-body .panel{
+      margin:0px;
+      margin-bottom: 2px;
+
+    }
+
+/* 首页 */
+    #xfmqr{
+      height: 280px;
+
+    }
+    #gfgg{
+      height:200px;
+    }
+    #zxpl{
+      height: 316px;
+    }
+    #gfgggd{
+      float: right;
+      color: white;
+
+    }
+    #zxplgd{
+      float: right;
+      color: white;
+    }
+    #zxpl .list-group-item article{
+      padding-top: 5px;
+      padding-left: 50px;
+    }
+    #zxpl  .list-group-item a{
+      float: right;
+      margin-top: -38px;
+      color: grey;
+      font-size: 14px;
+
+    }
+
+
+
+/* 活动统计 */
+    #dqhdzj{
+      height: 180px;
+    }
+    #hdqs{
+      height: 618px;
+    }
+
+
+/* 顾客统计 */
+    #gkzj{
+      height: 115px;
+    }
+    #gkcyqs{
+      height: 425px;
+    }
+    #gkfb{
+      height: 256px;
+    }
+
+/* 店铺评价*/
+    #plzj{
+      height: 90px;
+    }
+    #zxpl2{
+      height:708px;
+
+    }
+    #zxpl2 .list-group-item:nth-of-type(even) {
+     background-color: #f9f9f9;
+    }
+     #zxpl2 .list-group-item article{
+      padding-top: 5px;
+      padding-left: 50px;
+    }
+    #zxpl2  .list-group-item a{
+      float: right;
+      margin-top: -38px;
+      color: grey;
+      font-size: 14px;
+
+    }
+
+
+
+/* 账户余额 */
+    #zhye{
+      height: 140px;
+    }
+    #zhjl{
+      height: 658px;
+    }
+    #zhjlbg td{
+     padding: 8px;
+    }
+
+   #zhye span a{
+    color: red;
+   }
+
+   #zhjl thead{ 
+    background-color: #D1D1D1;
+   }
+   
+    
+
+
+
+/* 活动管理 */
+    #hdgl2{
+      height: 460px;
+    }
+    #lshd{
+      height:338px;
+    }
+    #tjxhd{
+      float: right;
+      color: white;
+    }
+    #hdgl2  .list-group-item a{
+      float: right;
+      margin-top: -38px;
+      color: red;
+      font-size: 14px;
+    }
+    #lshdbg thead{
+       background-color: #D1D1D1;
+    }
+
+
+/* 员工管理 */
+    #yggl2{
+      height: 800px;
+    }
+    .col-lg-12{
+      margin-bottom: 10px;
+    }
+    #tjxyg{
+      float: right;
+      color: white;
+
+    }
+    #fy{
+      text-align:center;
+
+    }
+    #ygxx thead{
+      background-color: #D1D1D1;
+     
+    }
+    #ygglfy{
+      margin-top: 65px;
+    }
+
+
+
+
+
+
+
+
+
+
+/* 店铺信息 */
+    #dpxx2{
+      height: 800px;
+
+    }
+    .dpxxtitle{
+      color:grey;
+    }
+
+    select{
+        height:25px;
+        width: 80px;
+
+    }
+    #dpxx2 td{
+      vertical-align:middle;
+      padding: 13px;
+    }
+    #dpxx2 td a{
+      color: red;
+     
+    }
+
+
+    /* 百度地图 */
+    #allmap{height:350px;width:100%;}
+    #r-result{width:100%; font-size:14px;display: none; }
+
+
+
+
+/* 脚注 */
+    footer{
+
+
+      clear: both;
+    }
+
+    

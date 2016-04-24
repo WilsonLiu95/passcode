@@ -1,0 +1,163 @@
+/*样式重置*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+/*personal css*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  background-color: #fafafa;
+  text-align: center;
+}
+/*first-page*/
+.header article {
+  display: ;/*第一个页面顶部内容*/
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.sq-code img {
+  position: relative;
+  width: 188px;
+  height: 188px;
+  border: 1px solid;
+}
+
+.share-btn-1  {
+  display:;  /*第一个页面底部按键 */
+  position: relative;
+  margin: 0 auto;
+  bottom: -140px;
+  width:90%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #00c7ba;
+}
+/*second-page*/
+.share-btn-2 {
+  display: none;/*第二个页面底部内容*/
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+.share-list-item {
+  width: 90%;
+  height: 40px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #00c7ba;
+  border: 1px solid #19ccc0;
+}
+.share-list-item:not(:first-child){
+  border-top: 0;
+ }
+ .share-list-item:last-child {
+   margin-top: 20px;
+   border-top: 1px solid #19ccc0;
+ }
+ .share-list-item:hover {
+   background-color: #e8e8e8;
+   border: 1px solid #19ccc0;
+ }
+@media (max-height:540px) {
+  .share-list-item {
+    height: 30px;
+  }
+}
+ /*third page*/
+ .header-intro {
+   display: none;  /*第三个页面底部内容*/
+   position: relative;
+   padding-top: 45px;
+   margin-bottom: 60px;
+   line-height: 1.75;
+ }
+ .intro-first span:first-child {
+   font-size: 17px;
+   font-weight: bold;
+   color: #333;
+ }
+  .intro-first span:last-child {
+   font-size: 13px;
+   color: #999;
+   margin-left: 10px;
+ }
+  .intro-second span {
+    font-size:14px;
+    color: #666;
+  }
+  .intro-second span:first-child {
+    padding-right: 10px;
+
+  }
+  .share-btn-3 {
+    display: none;/*第三个页面底部消失*/
+    position: absolute;
+    display:;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+  }
+  .share-btn-3 span {
+    position: relative;
+    bottom: 70px;
+    font-weight: bold;
+    color: #333;
+    font-size: 19px;
+  }
+  .share-btn-3 article  {
+    position: relative;
+    bottom:30px;
+    width: 237px;
+    margin: 0 auto;
+    padding: 17px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    background-color: #00c7ba;
+    color: #fff;
+  }
+
+  @media (max-height :580px) {
+    .header-intro {
+      padding-top: 30px;
+      margin-bottom: 40px;
+    }
+    .sq-code img {
+      width: 120px;
+      height: 120px;
+    }
+    .share-btn-3 article {
+      bottom: 0px;
+    }
+    .share-btn-3 span {
+      bottom: 30px;
+    }
+  }
+
+  /*动画*/
+.shareBtnAni {
+  animation:sharebtn2  .5s ease-in;
+  -webkit-animation:sharebtn2 .5s ease-in;
+  -moz-animation:sharebtn2 .5s ease-in;
+}
+@keyframes sharebtn2 {
+  0% {opacity: 0;bottom: -200px;}
+  100%{opacity: 1;bottom: 15px;}
+}
+@-webkit-keyframes sharebtn2 {
+
+}
+@-moz-keyframes sharebtn2 {
+
+}

@@ -1,0 +1,238 @@
+ <!--  -->
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta lang="zh">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="XUA-Compatible" content="IE=Edge">
+<meta name="render" content="webkit">
+<meta name="description" content="">
+<meta name="keyword" content="">
+<title>HUST课程系统|老师版</title>
+<link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body>
+  <!-- 导航部分 -->
+  <div id="main-header">
+    <img src="../images/hust_logo.png" alt="logo">
+    <!-- <span>欢迎，
+      <strong>郭争</strong>同学
+    </span> -->
+    <span>HUST课程系统</span>
+    <ul class="nav-list">
+      <a href="#" class="active">课表</a>
+      <a href="#">个人</a>
+      <a href="#">退出</a>
+    </ul>
+  </div>
+  <!-- 课表查询部分 -->
+    <div class="main-body classSelect">
+    <div class="header">
+
+      <div class="time-btn-list">
+
+        <button id="J_modifyPopBtn"class="time-btn-item">修改课表</button>
+      </div>
+    </div>
+    <div class="body-content student-first">
+      <table class="class-table" id="J_classTable">
+        <colgroup span="8"></colgroup>
+        <thead>
+          <th class="class-th"></th>
+          <th class="class-th">星期一</th>
+          <th class="class-th">星期二</th>
+          <th class="class-th">星期三</th>
+          <th class="class-th">星期四</th>
+          <th class="class-th">星期五</th>
+          <th class="class-th">星期六</th>
+          <th class="class-th">星期天</th>
+        </thead>
+        <tbody>
+          <tr class="class-tr">
+            <th class="class-th">第一节</th>
+            <td class="class-td"></td>
+            <td class="class-td">通信电子线路 1-12周　东九d203</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">微机原理</td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第二节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">微机原理实验</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第三节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">LOL对战分析</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第四节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">Wilson公开课</td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第五节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">郭正装逼课</td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+          </tr>
+          <tr class="class-tr">
+            <th class="class-th">第六节</th>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td"></td>
+            <td class="class-td">linux开发</td>
+            <td class="class-td"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+  <!--　个人信息  -->
+  <div class="main-body personalInfo disappear">
+    <div class="header">
+      <span>我的信息</span>
+      <button id="J_modifyInfo">修改信息</button>
+    </div>
+    <div class="body-content student-second">
+
+   <form id="form-teacher" action="index.html" method="post">
+
+      <div class="col-pc-6">
+        <label>姓名
+        <input class="userName" type="text">
+      </label>
+      </div>
+      <div class="col-pc-6">
+        <label>账号
+        <input class="userCode" value=""></label>
+
+      </div>
+      <div class="col-pc-6">
+        <label>院系
+          <input class="academy" type="text">
+        </label>
+      </div>
+      <div class="col-pc-6">
+        <label>密码
+          <input type="password" class="password" >
+          </label>
+
+      </div>
+
+      <div class="col-pc-6">
+        <label>邮箱
+          <input class="email" type="text">
+        </label>
+      </div>
+    </form>
+
+    </div>
+  </div>
+
+  <!-- 修改课程弹窗 -->
+  <!-- 背景 -->
+  <div class="plu-wrap-back disappear">
+    <!--  插件容器-->
+    <div class="plu-container">
+      <div class="plu-header">
+        <select id="J_dayOfWeek" class="plu-sel-week">
+          <option value="0">星期一</option>
+          <option value="1">星期二</option>
+          <option value="2">星期三</option>
+          <option value="3">星期四</option>
+          <option value="4">星期五</option>
+          <option value="5">星期六</option>
+          <option value="6">星期天</option>
+        </select>
+        <select id="J_sectionClass" class="plu-sel-section">
+          <option value="1">第一节</option>
+          <option value="2">第二节</option>
+          <option value="3">第三节</option>
+          <option value="4">第四节</option>
+          <option value="5">第五节</option>
+          <option value="6">第六节</option>
+
+        </select>
+        <button id="J_selectSure">确认</button>
+        <button id="J_abandonModify" name="button">退出</button>
+      </div>
+      <!--  插件主体-->
+      <div class="plu-body">
+        <!-- 课程信息列表 -->
+
+        <ul id="J_classList" class="plu-class-list">
+          <li class="plu-class-item">
+            <label>
+              课程:
+              <input class="class" type="text">
+            </label>
+            <label>
+              教室:
+              <input class="place" type="text">
+            </label>
+            <label>
+              学院:
+              <input class="academy" type="text">
+            </label>
+            <label>
+              专业:
+              <input class="major" type="text">
+            </label>
+            </label>
+            <label>
+              年级:
+              <input class="grade" type="text">
+            </label>
+            <label>
+              班级:
+              <input class="classNo" type="text">
+            </label>
+              <label>
+                时间:
+                <input class="duration" type="text" >
+              </label>
+
+              <a href="#">修改</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+	<script src="../script/teacher.js"></script>
+</body>
+</html>

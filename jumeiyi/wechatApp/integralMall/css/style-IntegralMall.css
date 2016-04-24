@@ -1,0 +1,112 @@
+html,
+body {
+	display: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+/*上下灰色区域*/
+/*.header:before {
+	content: "";
+	position: absolute;
+	top: -20px;
+	height: 20px;
+	width: 100%;
+	background-color: #eee;
+}
+.header:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 20px;
+	border-bottom: 1px solid #d7d7d7;
+	background-color: #eee;
+
+}*/
+/*头部背景图片区域*/
+.header {
+	position: relative;
+	height: 180px;	
+	background-image: url(../images/header-background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*margin-top: 20px;
+	margin-bottom: 20px;*/
+}
+	/*圆形*/
+#integral-header {
+	position: relative;
+	top: 32px;
+	width: 115px;
+	height: 115px;	
+	margin: 0px auto;
+	border: 0 solid;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+}
+#integral-header strong {
+	position: relative;
+	top: 20px;
+	font-size: 18px;
+	color: #666;	
+}
+#integral-header p {
+	color: #22a49d;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.integral-content {
+	padding-left: 25px;
+}
+
+/*题目：积分明细*/
+.integral-content .integral-head p {  
+	height: 65px;
+	line-height: 65px;
+	margin: 0;
+	color: #22a49d;
+	font-size: 20px;
+	font-weight: 600;
+	border-bottom: 1px solid #e4e4e4;
+
+}
+
+/*积分列表*/
+.integral-list {
+	margin: 0;
+	padding: 0;
+}
+.integral-list li {
+	height: 55px;
+	border-bottom: 1px solid #e4e4e4;
+	list-style: none;
+
+}
+.integral-list-left {
+	float: left;
+	margin: 10px 0 0 0px;
+
+}
+.integral-list-right {
+	float: right;
+	margin-right: 25px;
+	line-height: 55px;
+}
+.integral-list-left .integral-name {
+	font-size: 14px;
+	color: #333;
+}
+.integral-list-left time {
+	font-size: 14px;
+	color: #888;
+}
+.integral-list-right span {
+	font-size: 16px;
+	font-weight: bold;
+	color: #77d5ba;
+
+}

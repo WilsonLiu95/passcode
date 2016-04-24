@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta lang="zh">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="render" content="webkit">
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  <title>医生主页</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <!-- 测试按钮 -->
+  <button id="hah">haha</button>
+
+
+
+
+<!-- 插件代码 -->
+  <!-- 背景 -->
+  <div class="plu-bg-container">
+    <!--弹窗容器  -->
+    <div class="plu-register-container">
+      <!-- 头部 -->
+      <div class="plu-header">
+        <strong>请输入手机号</strong>
+        <img src="images/close.png" alt="X">
+      </div>
+      <!--表单主体-->
+      <form class="plu-register-form" action="" method="post">
+
+        <div>
+          <img src="images/user.png" alt="">
+          <input type="text" class="plu-user-name" placeholder="姓名">
+        </div>
+        <em>请输入姓名</em>
+
+        <div>
+          <img src="images/phone.png" alt="">
+          <input type="tel" class="plu-phone-number" placeholder="手机号">
+        </div>
+        <em>请输入正确的手机号</em>
+
+
+        <div>
+          <img src="images/security.png" alt="">
+          <input type="text" class="plu-security-code" placeholder="验证码">
+        </div>
+        <button type="button" id="plu-send-code">发送验证码</button>
+        <em>请输入正确的验证码</em>
+
+
+
+        <div class="plu-sex-choose">
+            <input type="radio" id="plu-sex-woman"  name="sex" value="女">
+            <label class="icon-venus" for="plu-sex-woman">女士</label>
+            <input type="radio" id="plu-sex-man" name="sex" value="男">
+            <label class="icon-mars" for="plu-sex-man">男士</label>
+        </div>
+        <button type="button" class="plu-form-confirm">确认</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="script/javascript.js"></script>
+</body>
+
+</html>
